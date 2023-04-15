@@ -1,10 +1,7 @@
 // Import stylesheets
-import './style.css';
-
+// import './style.css';
 
 interface DictionaryData {
-
-    
       word: string
       phonetic: string
       phonetics: [
@@ -35,16 +32,17 @@ interface DictionaryData {
   
 
 
-
-
-
-const form: HTMLFormElement|null = document.querySelector('#defineform');
+const form: HTMLFormElement|null = document.querySelector('#defineform')!;
 //handle null value better later
 
-if (form != null){
 form.onsubmit = () => {
   const formData = new FormData(form);
 
+
+  const defLists = document.querySelector(".list-unstyled");
+  const p = document.createElement("li");
+  p.textContent = "Hello, World!";
+  defLists === null || defLists === void 0 ? void 0 : defLists.appendChild(p);
 
 
   console.log(formData);
@@ -52,11 +50,19 @@ form.onsubmit = () => {
   console.log(text);
   // console.log(fetch("http://api.dictionaryapi.dev/api/v2/entries/en/" + text))
 
-  fetch("http://api.dictionaryapi.dev/api/v2/entries/en/" + text)
-      .then((response) => response.json())
-      .then((response) => {
-        return response as DictionaryData;
-      });
+  // fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + text)
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       return response as DictionaryData;
+  //     });
+
+  fetch("https://api.dictionaryapi.dev/api/v2/entries/en/"+text)
+  // cast response to be in json format???
+  .then((Response) => Response.json())
+  // get the data from API call and adding definitions to the web page
+  .then((DataTransfer) => {
+    console.log(DataTransfer)
+  });
+
   return false; // prevent reload
-}
 };
