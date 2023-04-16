@@ -41,7 +41,7 @@ form.onsubmit = async (event) => {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${text}`);
     const data = await response.json();
 
-    header.innerText = text;
+    header.innerText = `${text} 🐱 💕`;
 
     list.innerHTML = '';
     data[0].meanings.forEach((meaning: any) => {

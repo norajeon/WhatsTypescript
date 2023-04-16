@@ -45,7 +45,7 @@ form.onsubmit = (event) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const response = yield fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${text}`);
         const data = yield response.json();
-        header.innerText = text;
+        header.innerText = `${text} 🐱 💕`;
         list.innerHTML = '';
         data[0].meanings.forEach((meaning) => {
             const li = document.createElement('li');
