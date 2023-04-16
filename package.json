@@ -4,25 +4,12 @@
   "description": "what is typescript?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon source/server.ts",
-    "build": "rm -rf build/ && prettier --write source/ && tsc"
+    "test": "echo "Error: no test specified" && exit 1"
   },
-  "devDependencies": {
-    "ts-node": "^10.9.1"
-  },
-  "dependencies": {
-    "boostrap": "^5.2.3"
-  },
-  "keywords": [],
-  "author": "nora",
+  "author": "",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/norajeon/WhatsTypescript.git"
-  },
-  "bugs": {
-    "url": "https://github.com/norajeon/WhatsTypescript/issues"
-  },
-  "homepage": "https://github.com/norajeon/WhatsTypescript#readme"
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  }
 }
