@@ -34,7 +34,7 @@ const header: HTMLHeadingElement = document.querySelector('h1')!;
 form.onsubmit = async (event) => {
   event.preventDefault();
 
-  const formData = new FormData(form); // forma data from form
+  const formData = new FormData(form); 
   const text = formData.get('defineword') as string; // get the word user input
 
   try {

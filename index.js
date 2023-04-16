@@ -40,7 +40,7 @@ const list = document.querySelector('.list-unstyled');
 const header = document.querySelector('h1');
 form.onsubmit = (event) => __awaiter(void 0, void 0, void 0, function* () {
     event.preventDefault();
-    const formData = new FormData(form); // forma data from form
+    const formData = new FormData(form);
     const text = formData.get('defineword'); // get the word user input
     try {
         const response = yield fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${text}`);
