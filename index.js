@@ -57,9 +57,9 @@ form.onsubmit = (event) => __awaiter(void 0, void 0, void 0, function* () {
             li.innerText = `${phonetics.text} barkbark`;
             list.appendChild(li);
         });
-        data[0].meanings.defintions.forEach((definitions) => {
+        data[0].meanings.forEach((meaning) => {
             const li = document.createElement('li');
-            li.innerText = `${definitions[0]} : ${definitions[0].synonyms}`;
+            li.innerText = `Examples: ${meaning.definitions[0].example}`;
             list.appendChild(li);
         });
     }
